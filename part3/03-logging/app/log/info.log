@@ -46,3 +46,13 @@
 {"asctime": "2021-11-11 23:38:05,792", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
 {"asctime": "2021-11-11 23:38:05,900", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
 {"asctime": "2021-11-11 23:38:06,008", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:27,889", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,771", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,881", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,895", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,917", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,937", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,951", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,969", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:28,982", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}
+{"asctime": "2022-05-26 16:55:29,009", "filename": "logger.py", "levelname": "INFO", "name": "MLLogger", "log_message": "hello world"}

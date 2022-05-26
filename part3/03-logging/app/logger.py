@@ -6,6 +6,7 @@ from typing import Union
 from pydantic import BaseModel, BaseSettings, Field
 from datetime import datetime
 from logging import StreamHandler, LogRecord
+import logging
 
 import pytz
 import yaml
@@ -84,6 +85,7 @@ def get_ml_logger(
     # Default Logger Config를 추가합니다
     with open(config_path, "r") as f:
         logging_config = yaml.safe_load(f)
+    # print(logging_config)
     logging.config.dictConfig(logging_config)
     _logger = logging.getLogger(logger_name)
 
@@ -110,11 +112,12 @@ if __name__ == "__main__":
 
     here = Path(__file__)
     config_yaml_path = os.path.join(here.parent, "config.yaml")
-
+    print(f'config_yaml_path : {config_yaml_path}')
     logger = get_ml_logger(
         config_path=config_yaml_path,
-        credential_json_path="서비스 계정 JSON 파일 경로",  # FIXME
-        table_ref="빅쿼리 테이블 주소",  # FIXME: e.g., boostcamp-ai-tech-serving.online_serving_logs.mask_classification
+        credential_json_path="/Users/philhoonoh/Downloads/heumsi-playground-351304-c9c18689cc59.json",  # FIXME
+        table_ref="heumsi-playground-351304.online_serving_logs.mask_classification",  # FIXME: e.g., boostcamp-ai-tech-serving.online_serving_logs.mask_classification
     )
+    print(f'check logger : {logger}')
     for _ in range(10):
         logger.info("hello world")
