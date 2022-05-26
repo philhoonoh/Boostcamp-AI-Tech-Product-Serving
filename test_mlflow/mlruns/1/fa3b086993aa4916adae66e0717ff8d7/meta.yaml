@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/philhoonoh/Desktop/product_serving/Boostcamp-AI-Tech-Product-Serving/test_mlflow/mlruns/1/fa3b086993aa4916adae66e0717ff8d7/artifacts
+end_time: 1653594596031
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: fa3b086993aa4916adae66e0717ff8d7
+run_uuid: fa3b086993aa4916adae66e0717ff8d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1653594591431
+status: 4
+tags: []
+user_id: philhoonoh
