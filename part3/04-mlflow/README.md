@@ -36,7 +36,7 @@ CMD ["mlflow", "ui", "-h", "0.0.0.0", "-p", "5000"]
 아래 명령어로 Docker 이미지를 빌드합니다.
 
 ```bash
-$ docker build -t mlflow:1.24.0 .
+$ docker build . -t mlflow:1.24.0 .
 ```
 
 빌드되면 다음처럼 확인할 수 있습니다
