@@ -5,10 +5,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from bentoml import BentoService, api, env, artifacts
 from bentoml.adapters import JsonOutput, ImageInput
-from bentoml.artifact import PytorchModelArtifact
+from bentoml.frameworks.pytorch import PytorchModelArtifact
 from efficientnet_pytorch import EfficientNet
 from imageio.core.util import Array
 import torchvision
+import imageio
 
 classes = {
     0: ["Wear", "Male", "under 30"],
@@ -52,7 +53,7 @@ class MyEfficientNet(nn.Module):
 
 @env(infer_pip_packages=True)
 @artifacts([PytorchModelArtifact("model")])
-class MaskAPIService(BentoService):
+class MaskAPIService2(BentoService):
     def transform(self, image_array: Array):
         _transform = albumentations.Compose(
             [
@@ -67,7 +68,7 @@ class MaskAPIService(BentoService):
         return classes[class_]
 
     @api(input=ImageInput(), output=JsonOutput())
-    def predict(self, image_array: Array):
+    def predict(self, image_array: imageio.core.util.Array):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
         transformed_image = self.transform(image_array).to(device)
@@ -79,7 +80,7 @@ class MaskAPIService(BentoService):
 if __name__ == "__main__":
     import torch
 
-    bento_svc = MaskAPIService()
+    bento_svc = MaskAPIService2()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MyEfficientNet().to(device)
     state_dict = torch.load(

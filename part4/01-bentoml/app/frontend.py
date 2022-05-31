@@ -9,7 +9,7 @@ from PIL import Image
 import streamlit as st
 
 # SETTING PAGE CONFIG TO WIDE MODE
-from app.confirm_button_hack import cache_on_button_press
+from confirm_button_hack import cache_on_button_press
 
 ASSETS_DIR_PATH = os.path.join(Path(__file__).parent.parent.parent.parent, "assets")
 
@@ -33,7 +33,7 @@ def main():
             ('files', (uploaded_file.name, image_bytes,
                        uploaded_file.type))
         ]
-        response = requests.post("http://localhost:5000/predict", files=files)
+        response = requests.post("http://localhost:5001/predict", files=files)
         label = response.json()
         st.write(f'label is {label}')
 

@@ -9,10 +9,10 @@ X, y = iris.data, iris.target
 clf.fit(X, y)
 
 # bento_service.py에서 정의한 IrisClassifier
-from bento_service import IrisClassifier
+from bento_service import IrisClassifier1
 
 # IrisClassifier 인스턴스 생성
-iris_classifier_service = IrisClassifier()
+iris_classifier_service = IrisClassifier1()
 
 # Model Artifact를 Pack
 iris_classifier_service.pack('model', clf)
